@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+<link th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+<link th:href="@{https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css}" rel="stylesheet" media="screen"/>
+<link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+<link th:href="@{/css/album.css}" rel="stylesheet" media="screen"/>
+<link th:href="@{https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css}" rel="stylesheet"/>
+<link th:href="@{https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.4.0/dist/select2-bootstrap4.min.css}"
+      rel="stylesheet"/>
+<script th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+<script th:src="@{/js/cpfMask.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js}"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+<script th:src="@{https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js}"></script>
+<script th:src="@{https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js}"></script>
+<script th:src="@{https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js}"></script>
+
+<title th:if="${titulo} != null" th:text="'Aluga.se - ' + ${titulo}"></title>
+<title th:if="${titulo} == null" th:text="'Aluga.se - Erro'"></title>
+<body style="background-color: #f8f9fa">
+<!-- fragmento Menu -->
+<div th:replace="fragments/header :: header"></div>
+<br>
+<br>
+<br>
+<!-- fragmento corpo da pagina -->
+<div class="container" style="background-color: white">
+  <section layout:fragment="body">
+    conteudo principal
+  </section>
+</div>
+<br>
+<!-- fragmento Footer -->
+<footer th:replace="fragments/footer :: footer">
+  <div>footer</div>
+</footer>
+
+
+</body>
+
+
+</html>

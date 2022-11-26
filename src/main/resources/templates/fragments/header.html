@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<body>
+<div th:fragment="header">
+    <nav class="navbar navbar-expand-md bg-primary fixed-top">
+        <ul class="navbar-nav mr-auto">
+            <a class="navbar-brand" href="/"><img width="70px" height="40px" th:src="@{/images/logo.jpg}"/></a>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/}">Home</a>
+            </li>
+        </ul>
+    </nav>
+</div>

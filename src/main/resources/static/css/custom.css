@@ -1,0 +1,25 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+    border-right: 1px solid darkgray;
+}
+
+.nav-link{
+    color: lightgrey;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item:not(:last-child) {
+        border-right: none;
+    }
+}
