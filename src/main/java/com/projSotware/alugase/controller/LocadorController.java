@@ -1,5 +1,6 @@
 package com.projSotware.alugase.controller;
 
+import com.projSotware.alugase.enums.Mensagem;
 import com.projSotware.alugase.service.LocadorService;
 import com.projSotware.alugase.builder.ModelMapBuilder;
 import com.projSotware.alugase.enums.TituloPagina;
@@ -34,7 +35,7 @@ public class LocadorController {
         } catch (Exception e){
             return "error";
         }
-        HashMap<String, String> mensagemSucesso = MensagensFactory.getMensagemComTipoETexto("success", MensagensFactory.getSucessoCadastroLocador());
+        var mensagemSucesso = MensagensFactory.getMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_LOCADOR.getMensagem());
         ModelMapBuilder.setMensagem(mensagemSucesso, model);
         ModelMapBuilder.setTitulo("Login", model);
         return "login";

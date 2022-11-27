@@ -31,10 +31,4 @@ public class Usuario implements Serializable {
     @OneToMany(mappedBy = "id", targetEntity = Endereco.class, cascade = CascadeType.REMOVE)
     private List<Endereco> enderecos;
 
-
-
-
-
-
-
 }

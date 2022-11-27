@@ -30,8 +30,8 @@ public class LocadorService {
         locadorRepository.save(locador);
     }
 
-    public List<Locador> todosLocadores(){
-        return locadorRepository.findAll();
+    public ArrayList<Locador> todosLocadores(){
+        return (ArrayList<Locador>) locadorRepository.findAll();
     }
 
 
