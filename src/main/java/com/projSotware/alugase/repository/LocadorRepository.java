@@ -1,6 +1,6 @@
-package com.projSotware.alugase.Repository;
+package com.projSotware.alugase.repository;
 
-import com.projSotware.alugase.Model.Locador;
+import com.projSotware.alugase.model.Locador;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

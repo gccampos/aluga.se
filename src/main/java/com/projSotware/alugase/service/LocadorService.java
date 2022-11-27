@@ -1,9 +1,9 @@
-package com.projSotware.alugase.Service;
+package com.projSotware.alugase.service;
 
-import com.projSotware.alugase.Model.DadosBancarios;
-import com.projSotware.alugase.Model.Endereco;
-import com.projSotware.alugase.Model.Locador;
-import com.projSotware.alugase.Repository.LocadorRepository;
+import com.projSotware.alugase.model.DadosBancarios;
+import com.projSotware.alugase.model.Endereco;
+import com.projSotware.alugase.model.Locador;
+import com.projSotware.alugase.repository.LocadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

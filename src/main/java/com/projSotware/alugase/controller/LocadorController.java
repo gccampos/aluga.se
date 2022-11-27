@@ -1,11 +1,10 @@
 package com.projSotware.alugase.controller;
 
-import com.projSotware.alugase.Service.LocadorService;
+import com.projSotware.alugase.service.LocadorService;
 import com.projSotware.alugase.builder.ModelMapBuilder;
 import com.projSotware.alugase.enums.TituloPagina;
 import com.projSotware.alugase.factory.MensagensFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,6 +36,7 @@ public class LocadorController {
         }
         HashMap<String, String> mensagemSucesso = MensagensFactory.getMensagemComTipoETexto("success", MensagensFactory.getSucessoCadastroLocador());
         ModelMapBuilder.setMensagem(mensagemSucesso, model);
+        ModelMapBuilder.setTitulo("Login", model);
         return "login";
     }
 

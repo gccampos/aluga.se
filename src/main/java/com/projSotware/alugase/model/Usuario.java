@@ -1,4 +1,4 @@
-package com.projSotware.alugase.Model;
+package com.projSotware.alugase.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

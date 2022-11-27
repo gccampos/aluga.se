@@ -1,4 +1,4 @@
-package com.projSotware.alugase.Model;
+package com.projSotware.alugase.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,23 +15,19 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DadosBancarios implements Serializable {
-
+public class Endereco implements Serializable {
     @Id
     private Long id;
 
     @Column(nullable = false)
-    private String numeroConta;
+    private String logradouro;
 
     @Column(nullable = false)
-    private String agencia;
+    private String cep;
+
+    private String complemento;
 
     @Column(nullable = false)
-    private String nomeBanco;
-
-    private String chavePix;
-
-
-
+    private Long numero;
 
 }

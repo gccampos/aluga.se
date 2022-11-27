@@ -1,10 +1,9 @@
-package com.projSotware.alugase.Model;
+package com.projSotware.alugase.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.bytebuddy.implementation.bind.annotation.Super;
 
 import javax.persistence.*;
 import java.io.Serializable;
