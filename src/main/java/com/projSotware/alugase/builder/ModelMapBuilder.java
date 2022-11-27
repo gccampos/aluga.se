@@ -1,4 +1,4 @@
-package builder;
+package com.projSotware.alugase.builder;
 
 import org.springframework.ui.ModelMap;
 

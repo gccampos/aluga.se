@@ -1,8 +1,8 @@
-package enums;
+package com.projSotware.alugase.enums;
 
 public enum TituloPagina {
-    HOME("Página Inicial");
-
+    HOME("Página Inicial"),
+    CADASTRO_LOCADOR("Cadastro Locador");
     private final String titulo;
 
     TituloPagina(String tituloPagina) {
