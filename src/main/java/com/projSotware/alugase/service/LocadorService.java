@@ -23,10 +23,7 @@ public class LocadorService {
         return locadorRepository.findByCpf(cpf);
     }
 
-    public void cadastrarLocador(String nome, String email, String cpf, String telefone, Endereco endereco, DadosBancarios dadosBancarios){
-        var enderecos = new ArrayList<Endereco>();
-        enderecos.add(endereco);
-        Locador locador = new Locador(nome, email, cpf, telefone, enderecos, null);
+    public void cadastrarLocador(Locador locador){
         locadorRepository.save(locador);
     }
 
