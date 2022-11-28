@@ -1,6 +1,8 @@
 package com.projSotware.alugase.controller;
 
 import com.projSotware.alugase.enums.Mensagem;
+import com.projSotware.alugase.model.Endereco;
+import com.projSotware.alugase.model.Locador;
 import com.projSotware.alugase.service.LocadorService;
 import com.projSotware.alugase.builder.ModelMapBuilder;
 import com.projSotware.alugase.enums.TituloPagina;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @Controller
@@ -30,8 +33,10 @@ public class LocadorController {
 
     @PostMapping(value = "/cadastrar")
     private String cadastrar(@RequestParam String nome, @RequestParam String email, @RequestParam String cpf,@RequestParam String telefone, ModelMap model){
+        var enderecos = new ArrayList<Endereco>();
+        Locador locador = new Locador(nome, email, cpf, telefone, enderecos, null);
         try{
-            locadorService.cadastrarLocador(nome, email, cpf, telefone, null, null);
+            locadorService.cadastrarLocador(locador);
         } catch (Exception e){
             return "error";
         }
