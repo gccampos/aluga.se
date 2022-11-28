@@ -16,28 +16,33 @@
                             <div th:if="${messages} != null" th:class="${'alert alert-' + messages.tipo }">
                                 <i th:text="${messages.texto}"></i>
                             </div>
-<!--                            <div class="form-group">-->
-<!--                                <label for="nome">Nome Completo</label>-->
-<!--                                <input type="text" name="nome" id="nome" class="form-control input-lg"-->
-<!--                                       placeholder="Nome" required="true"/>-->
-<!--                            </div>-->
-<!--                            <div class="form-group">-->
-<!--                                <label for="email">E-Mail</label>-->
-<!--                                <input type="email" name="email" id="email" class="form-control input-lg"-->
-<!--                                       placeholder="Nome" required="true"/>-->
-<!--                            </div>-->
 
-<!--                            <div class="form-group">-->
-<!--                                <label for="cpf">CPF</label>-->
-<!--                                <input type="" name="cpf" id="cpf" class="form-control input-lg"-->
-<!--                                       placeholder="CPF" required="true"/>-->
-<!--                            </div>-->
+                            <div class="form-group">
+                                <label for="nome">Nome do Produto</label>
+                                <input type="text" name="nome" id="nome" class="form-control input-lg"
+                                       placeholder="Nome do Produto" required="true"/>
+                            </div>
 
-<!--                            <div class="form-group">-->
-<!--                                <label for="telefone">Telefone</label>-->
-<!--                                <input type="" name="telefone" id="telefone" class="form-control input-lg"-->
-<!--                                       placeholder="Telefone" required="true"/>-->
-<!--                            </div>-->
+                            <div class="form-group d-flex flex-column">
+                                <label for="categoria">Categoria do Produto</label>
+                                <select class="form-select text-center py-2" aria-label="Selecione a categoria" name="categoria" id="categoria">
+                                    <option selected>Selecione a categoria</option>
+                                    <option>Categoria #01</option>
+                                    <option>Categoria #02</option>
+                                    <option>Categoria #03</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="valor">Valor da Diária (R$)</label>
+                                <input type="number" name="valor" id="valor" class="form-control input-lg"
+                                       placeholder="Valor da Diária (R$)" required="true"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="imagem" class="form-label">Imagem do Produto</label>
+                                <input class="form-control mb-3 pb-3" type="file" id="imagem" name="imagem" accept="imagem/*">
+                            </div>
 
                             <div class="row">
                                 <div class="col-xs-6 col-sm-6 col-md-6">
