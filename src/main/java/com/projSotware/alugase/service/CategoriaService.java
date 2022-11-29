@@ -5,6 +5,8 @@ import com.projSotware.alugase.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 @Service
 public class CategoriaService {
 
@@ -21,6 +23,9 @@ public class CategoriaService {
 
     public void cadastrarCategoria(Categoria categoria){
         categoriaRepository.save(categoria);
+    }
+    public ArrayList<Categoria> todasCategorias(){
+        return (ArrayList<Categoria>) categoriaRepository.findAll();
     }
 
 }

@@ -24,12 +24,12 @@
                             </div>
 
                             <div class="form-group d-flex flex-column">
-                                <label for="categoria">Categoria do Produto</label>
-                                <select class="form-select text-center py-2" aria-label="Selecione a categoria" name="categoria" id="categoria">
-                                    <option selected>Selecione a categoria</option>
-                                    <option>Categoria #01</option>
-                                    <option>Categoria #02</option>
-                                    <option>Categoria #03</option>
+                                <label for="idCategoria">Categoria do Produto</label>
+                                <select class="form-select text-center py-2" aria-label="Selecione a categoria" name="idCategoria" id="idCategoria">
+                                    <option th:if="${#arrays.length(categorias) >=1}"
+                                            th:each="categoria : ${categorias}" th:text="${categoria.getNome()}" th:value="${categoria.getId()}">
+                                    </option>
+
                                 </select>
                             </div>
 

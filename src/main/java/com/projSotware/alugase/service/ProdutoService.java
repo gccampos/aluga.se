@@ -23,4 +23,8 @@ public class ProdutoService {
     public ArrayList<Produto> todosProdutos(){
         return (ArrayList<Produto>) produtoRepository.findAll();
     }
+
+    public void cadastrarProduto(Produto produto){
+         produtoRepository.save(produto);
+    }
 }

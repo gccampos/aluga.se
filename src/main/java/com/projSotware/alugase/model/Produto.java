@@ -27,4 +27,12 @@ public class Produto implements Serializable {
     private float valorDiaria;
     @OneToOne
     private Locador locador;
+
+    public Produto(String nome, Categoria categoria, byte[] foto, float valorDiaria, Locador locador){
+        this.nome = nome;
+        this.categoria = categoria;
+        this.foto = foto;
+        this.valorDiaria = valorDiaria;
+        this.locador = locador;
+    }
 }
