@@ -27,5 +27,15 @@
                 <a class="nav-link" th:href="@{/locatario/cadastro}">Cadastro Locatario</a>
             </li>
         </ul>
+        <div>
+            <a th:if="${session.isEmpty()}" th:href="@{/login}" method="get">
+                <input class="btn btn-outline-light" type="button" value="Login"/>
+            </a>
+            <form th:if="${!session.isEmpty()}" method="POST" th:action="@{/logout}">
+                <a>
+                    <input class="btn btn-outline-light" type="submit" value="Logout"/>
+                </a>
+            </form>
+        </div>
     </nav>
 </div>

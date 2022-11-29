@@ -1,6 +1,7 @@
 package com.projSotware.alugase.enums;
 
 public enum Mensagem {
+    ERRO_LOGIN("Entradas inválidas"),
     SUCESSO_CADASTRO_LOCADOR("Locador Cadastrado com sucesso"),
     SUCESSO_CADASTRO_PRODUTO("Produto Cadastrado com sucesso"),
     SUCESSO_CADASTRO_CATEGORIA("Categoria Cadastrada com sucesso"),

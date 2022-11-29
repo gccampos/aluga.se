@@ -3,6 +3,7 @@ package com.projSotware.alugase.enums;
 public enum TituloPagina {
 
     HOME("Página Inicial"),
+    LOGIN("Login"),
     CADASTRO_LOCADOR("Cadastro Locador"),
     CADASTRO_PRODUTO("Cadastro Produto"),
     CADASTRO_CATEGORIA("Cadastro Categoria"),
