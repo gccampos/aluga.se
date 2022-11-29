@@ -18,7 +18,9 @@ public class EmpresaService {
         return empresaRepository.findByRazaoSocial(nome);
     }
 
-
+    public Empresa buscarPorCnpj(String cnpj){
+        return empresaRepository.findByCnpj(cnpj);
+    }
 
 
 }

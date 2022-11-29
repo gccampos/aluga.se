@@ -11,6 +11,7 @@ public interface LocatarioRepository extends JpaRepository<Locatario, Long> {
 
     Locatario findById(long id);
     Locatario findByNome(String nome);
+    Locatario findByCpf(String cpf);
     List<Locatario> findAll();
 
 }

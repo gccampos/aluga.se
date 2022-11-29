@@ -10,6 +10,7 @@ import java.util.List;
 public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
     Empresa findById(long id);
     Empresa findByRazaoSocial(String razaoSocial);
+    Empresa findByCnpj(String cnpj);
     List<Empresa> findAll();
 
 }

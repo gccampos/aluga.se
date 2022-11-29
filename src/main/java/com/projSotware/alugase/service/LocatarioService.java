@@ -16,5 +16,8 @@ public class LocatarioService {
         return locatarioRepository.findById(id);
     }
 
+    public Locatario buscarPorCpf(String cpf){
+        return locatarioRepository.findByCpf(cpf);
+    }
 
 }
