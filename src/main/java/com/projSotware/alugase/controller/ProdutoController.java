@@ -19,10 +19,11 @@ import java.util.HashMap;
 public class ProdutoController {
     @Autowired
     ProdutoService produtoService;
+    private String titulo = TituloPagina.CADASTRO_PRODUTO.getTitulo();
 
     @GetMapping(value = "/cadastro")
     public String cadastro(ModelMap model){
-        ModelMapBuilder.setTitulo(TituloPagina.CADASTRO_PRODUTO.getTitulo(), model);
+        ModelMapBuilder.setTitulo(titulo, model);
         return "cadastroProduto";
     }
 

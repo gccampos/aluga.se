@@ -32,9 +32,9 @@ public class LocadorController {
     }
 
     @PostMapping(value = "/cadastrar")
-    private String cadastrar(@RequestParam String nome, @RequestParam String email, @RequestParam String cpf,@RequestParam String telefone, ModelMap model){
+    private String cadastrar(@RequestParam String nome, @RequestParam String email, @RequestParam String senha,@RequestParam String cpf,@RequestParam String telefone, ModelMap model){
         var enderecos = new ArrayList<Endereco>();
-        Locador locador = new Locador(nome, email, cpf, telefone, enderecos, null);
+        Locador locador = new Locador(nome, senha,email, cpf, telefone, enderecos, null);
         try{
             locadorService.cadastrarLocador(locador);
         } catch (Exception e){

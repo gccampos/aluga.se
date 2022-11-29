@@ -20,6 +20,9 @@ public class Usuario implements Serializable {
     private String nome;
 
     @Column(nullable = false)
+    private String senha;
+
+    @Column(nullable = false)
     private String email;
 
     @Column(nullable = false, unique = true, length = 14)
@@ -30,5 +33,7 @@ public class Usuario implements Serializable {
 
     @OneToMany(mappedBy = "id", targetEntity = Endereco.class, cascade = CascadeType.REMOVE)
     private List<Endereco> enderecos;
+
+
 
 }

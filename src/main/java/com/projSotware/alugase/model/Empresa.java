@@ -7,27 +7,29 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Locador extends Usuario implements Serializable  {
+public class Empresa implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String email;
+    private String senha;
+    private String nomeFantasia;
+    private String razaoSocial;
+    private String cnpj;
     @OneToOne
     private DadosBancarios dadosBancarios;
-
+    private String cpfRepresentante;
     @Lob
-    private byte[] fotoRG;
+    private byte[] fotoRGRepresentante;
 
-    public Locador(String nome, String senha,String email, String cpf, String telefone, ArrayList<Endereco> enderecos, DadosBancarios dadosBancarios) {
-         super(nome, senha,email, cpf, telefone, enderecos);
-         this.dadosBancarios = dadosBancarios;
-    }
+
+
 }
