@@ -14,8 +14,8 @@ public class EmpresaService {
         return empresaRepository.findById(id);
     }
 
-    public Empresa buscarPorNome(String nome){
-        return empresaRepository.findByNome(nome);
+    public Empresa buscarPorRazaoSocial(String nome){
+        return empresaRepository.findByRazaoSocial(nome);
     }
 
 
