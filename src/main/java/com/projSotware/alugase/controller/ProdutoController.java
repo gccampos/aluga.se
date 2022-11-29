@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.HashMap;
-
 @Controller
 @RequestMapping(path = "/produto")
 public class ProdutoController {
@@ -29,7 +27,7 @@ public class ProdutoController {
 
     @PostMapping(value = "/cadastrar")
     public String cadastrar(ModelMap model){
-        var mensagemSucesso = MensagensFactory.getMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_PRODUTO.getMensagem());
+        var mensagemSucesso = MensagensFactory.setMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_PRODUTO.getMensagem());
         ModelMapBuilder.setTitulo(TituloPagina.CADASTRO_PRODUTO.getTitulo(), model);
         ModelMapBuilder.setMensagem(mensagemSucesso, model);
         return "cadastroProduto";

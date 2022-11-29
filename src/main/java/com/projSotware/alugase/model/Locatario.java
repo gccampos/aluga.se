@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 @Entity
 @Getter
@@ -21,6 +22,10 @@ public class Locatario extends Usuario implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+
+    public Locatario(String nome, String senha, String email, String cpf, String telefone, ArrayList<Endereco> enderecos){
+        super(nome, senha, email, cpf, telefone, enderecos);
+    }
 
 
 

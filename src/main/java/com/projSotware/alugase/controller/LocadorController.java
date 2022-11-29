@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 @Controller
 @RequestMapping(path = "/locador")
@@ -40,7 +39,7 @@ public class LocadorController {
         } catch (Exception e){
             return "error";
         }
-        var mensagemSucesso = MensagensFactory.getMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_LOCADOR.getMensagem());
+        var mensagemSucesso = MensagensFactory.setMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_LOCADOR.getMensagem());
         ModelMapBuilder.setMensagem(mensagemSucesso, model);
         ModelMapBuilder.setTitulo("Login", model);
         return "login";

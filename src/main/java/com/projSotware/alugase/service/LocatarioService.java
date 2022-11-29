@@ -20,4 +20,8 @@ public class LocatarioService {
         return locatarioRepository.findByCpf(cpf);
     }
 
+    public void cadastrarLocatario(Locatario locatario){
+        locatarioRepository.save(locatario);
+    }
+
 }

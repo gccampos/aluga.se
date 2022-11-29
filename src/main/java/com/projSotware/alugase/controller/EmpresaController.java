@@ -25,6 +25,7 @@ public class EmpresaController {
 
     @PostMapping("/cadastrar")
     public String cadastrar(ModelMap model){
+
         return "cadastroEmpresa";
     }
 

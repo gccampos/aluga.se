@@ -41,7 +41,7 @@ public class IndexController {
         var locador = loginService.loginLocador(cpf, senha);
         var locatario = loginService.loginLocatario(cpf, senha);
         if(locador == null && locatario == null){
-            var mensagem = MensagensFactory.getMensagemComTipoETexto("error", Mensagem.ERRO_LOGIN.getMensagem());
+            var mensagem = MensagensFactory.setMensagemComTipoETexto("error", Mensagem.ERRO_LOGIN.getMensagem());
             ModelMapBuilder.setMensagem(mensagem, model);
             String titulo = TituloPagina.LOGIN.getTitulo();
             ModelMapBuilder.setTitulo(titulo, model);
@@ -50,7 +50,7 @@ public class IndexController {
         if(locador == null){
             sessao.setAttribute("usuarioLogado", locatario);
         }
-        else{
+        else {
             sessao.setAttribute("usuarioLogado", locador);
         }
         return "redirect:/";

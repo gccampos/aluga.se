@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.beans.XMLEncoder;
-
 @Controller
 @RequestMapping(path = "/categoria")
 public class CategoriaController {
@@ -34,7 +32,7 @@ public class CategoriaController {
     public String cadastrar(ModelMap model, @RequestParam String nome){
         var categoria = new Categoria(nome);
         categoriaService.cadastrarCategoria(categoria);
-        var mensagem = MensagensFactory.getMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_CATEGORIA.getMensagem());
+        var mensagem = MensagensFactory.setMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_CATEGORIA.getMensagem());
         ModelMapBuilder.setMensagem(mensagem, model);
         return "cadastroCategoria";
 
