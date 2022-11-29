@@ -18,10 +18,7 @@ public class LoginService {
 
     public Locador loginLocador(String cpf, String senha){
         var locador = locadorService.buscarPorCpf(cpf);
-        if(locador == null){
-            return null;
-        }
-        if(locador.getSenha() != senha){
+        if(locador == null || locador.getSenha() != senha){
             return null;
         }
         return locador;
@@ -29,10 +26,7 @@ public class LoginService {
 
     public Locatario loginLocatario(String cpf, String senha){
         var locatario = locatarioService.buscarPorCpf(cpf);
-        if(locatario == null){
-            return null;
-        }
-        if(locatario.getSenha() != senha){
+        if(locatario == null || locatario.getSenha() != senha){
             return null;
         }
         return locatario;
@@ -40,10 +34,7 @@ public class LoginService {
 
     public Empresa loginEmpresa(String cnpj, String senha){
         var empresa = empresaService.buscarPorCnpj(cnpj);
-        if(empresa == null){
-            return null;
-        }
-        if(empresa.getSenha() != senha){
+        if(empresa == null || empresa.getSenha() != senha){
             return null;
         }
         return empresa;
