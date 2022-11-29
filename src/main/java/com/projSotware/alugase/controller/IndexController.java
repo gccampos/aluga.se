@@ -40,8 +40,8 @@ public class IndexController {
     public String logar(ModelMap model, @RequestParam String cpf, @RequestParam String senha, HttpSession sessao){
         var locador = loginService.loginLocador(cpf, senha);
         var locatario = loginService.loginLocatario(cpf, senha);
-        if(locador == null || locatario == null){
-            var mensagem = MensagensFactory.getMensagemComTipoETexto("Success", Mensagem.ERRO_LOGIN.getMensagem());
+        if(locador == null && locatario == null){
+            var mensagem = MensagensFactory.getMensagemComTipoETexto("error", Mensagem.ERRO_LOGIN.getMensagem());
             ModelMapBuilder.setMensagem(mensagem, model);
             String titulo = TituloPagina.LOGIN.getTitulo();
             ModelMapBuilder.setTitulo(titulo, model);
@@ -53,6 +53,12 @@ public class IndexController {
         else{
             sessao.setAttribute("usuarioLogado", locador);
         }
+        return "redirect:/";
+    }
+
+    @PostMapping("/logout")
+    public String logout(ModelMap model, HttpSession session) {
+        session.invalidate();
         return "redirect:/";
     }
 
