@@ -29,7 +29,7 @@ public class CategoriaController {
         ModelMapBuilder.setTitulo(titulo, model);
         return "cadastroCategoria";
     }
-
+    
     @PostMapping(value = "/cadastrar")
     public String cadastrar(ModelMap model, @RequestParam String nome){
         var categoria = new Categoria(nome);
