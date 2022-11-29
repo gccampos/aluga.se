@@ -4,7 +4,6 @@ import com.projSotware.alugase.builder.ModelMapBuilder;
 import com.projSotware.alugase.enums.TituloPagina;
 import com.projSotware.alugase.service.LocatarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +23,7 @@ public class LocatarioController {
 
     }
 
-    
+
 
 
 }
