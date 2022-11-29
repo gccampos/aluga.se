@@ -20,12 +20,12 @@ public class EmpresaController {
     @GetMapping("/cadastro")
     public String cadastro(ModelMap model){
         ModelMapBuilder.setTitulo(titulo, model);
-        return "cadastrarEmpresa";
+        return "cadastroEmpresa";
     }
 
     @PostMapping("/cadastrar")
     public String cadastrar(ModelMap model){
-        return "cadastrarEmpresa";
+        return "cadastroEmpresa";
     }
 
 }
