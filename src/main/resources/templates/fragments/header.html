@@ -11,35 +11,60 @@
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/}">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/locador/cadastro}">Cadastro Locador</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="locadorDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Locador
+                </a>
+                <div class="dropdown-menu" aria-labelledby="locadorDropdown">
+                    <a class="dropdown-item" th:href="@{/locador/cadastro}">Cadastro Locador</a>
+                    <a class="dropdown-item" th:href="@{/locador/locadores}">Lista de Locadores</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/produto/cadastro}">Cadastro Produto</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="produtoDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Produto
+                </a>
+                <div class="dropdown-menu" aria-labelledby="produtoDropdown">
+                    <a class="dropdown-item" th:href="@{/produto/cadastro}">Cadastro Produto</a>
+                    <a class="dropdown-item" th:href="@{/produto/produtos}">Lista de Produtos</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/categoria/cadastro}">Cadastro Categoria</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categoriaDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Categoria
+                </a>
+                <div class="dropdown-menu" aria-labelledby="categoriaDropdown">
+                    <a class="dropdown-item" th:href="@{/categoria/cadastro}">Cadastro Categoria</a>
+                    <a class="dropdown-item" th:href="@{/categoria/categorias}">Lista de Categorias</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/empresa/cadastro}">Cadastro Empresa</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="empresaDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Empresa
+                </a>
+                <div class="dropdown-menu" aria-labelledby="empresaDropdown">
+                    <a class="dropdown-item" th:href="@{/empresa/cadastro}">Cadastro Empresa</a>
+                    <a class="dropdown-item" th:href="@{/empresa/empresas}">Lista de Empresas</a>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/locatario/cadastro}">Cadastro Locatario</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/locador/locadores}">Lista de Locadores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/categoria/categorias}">Lista de Categorias</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/empresa/empresas}">Lista de Empresas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/produto/produtos}">Lista de Produtos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/locatario/locatarios}">Lista de Locatários</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="locatarioDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Locatário
+                </a>
+                <div class="dropdown-menu" aria-labelledby="locatarioDropdown">
+                    <a class="dropdown-item" th:href="@{/locatario/cadastro}">Cadastro Locatários</a>
+                    <a class="dropdown-item" th:href="@{/locatario/locatarios}">Lista de Locatários</a>
+                </div>
             </li>
         </ul>
         <div>
