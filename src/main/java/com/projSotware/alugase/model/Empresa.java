@@ -30,6 +30,17 @@ public class Empresa implements Serializable {
     @Lob
     private byte[] fotoRGRepresentante;
 
+    public Empresa(String email, String senha, String nomeFantasia, String razaoSocial, String cnpj, DadosBancarios dadosBancarios, String cpfRepresentante, byte[] fotoRGRepresentante) {
+        this.email = email;
+        this.senha = senha;
+        this.nomeFantasia = nomeFantasia;
+        this.razaoSocial = razaoSocial;
+        this.cnpj = cnpj;
+        this.dadosBancarios = dadosBancarios;
+        this.cpfRepresentante = cpfRepresentante;
+        this.fotoRGRepresentante = fotoRGRepresentante;
+    }
 
+    
 
 }

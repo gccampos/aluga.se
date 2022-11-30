@@ -22,5 +22,7 @@ public class EmpresaService {
         return empresaRepository.findByCnpj(cnpj);
     }
 
-
+    public void cadastrarEmpresa(Empresa empresa){
+        empresaRepository.save(empresa);
+    }
 }
