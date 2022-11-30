@@ -41,11 +41,13 @@ public class ProdutoController {
     }
 
     @PostMapping(value = "/cadastrar")
-    public String cadastrar(ModelMap model, HttpSession sessao, @RequestParam String nome, @RequestParam String idCategoria, @RequestParam String valorDiaria, @RequestParam MultipartFile imagem){
+    public String cadastrar(ModelMap model, HttpSession sessao, @RequestParam String nome, @RequestParam String idCategoria, @RequestParam String valor, @RequestParam MultipartFile imagem){
         var categoria = categoriaService.buscarPorId(Long.parseLong(idCategoria));
 //        Locador locador = locadorService.buscarPorId((Locador) sessao.getAttribute("usuarioLogado").getId());
         try {
-            var produto = new Produto(nome, categoria, imagem.getBytes(),Float.parseFloat(valorDiaria), null);
+            var imagemByte = new byte[0];
+            imagemByte = imagem.getBytes();
+            var produto = new Produto(nome, categoria, imagemByte,Float.parseFloat(valor), null);
             produtoService.cadastrarProduto(produto);
             var mensagemSucesso = MensagensFactory.setMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_PRODUTO.getMensagem());
             ModelMapBuilder.setTitulo(TituloPagina.CADASTRO_PRODUTO.getTitulo(), model);

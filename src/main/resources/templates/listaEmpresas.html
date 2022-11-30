@@ -29,9 +29,9 @@
                     <tr th:each="empresa : ${empresas}">
                         <td th:text="${empresa.id}"></td>
                         <td th:text="${empresa.nomeFantasia}"></td>
-                        <td th:text="${empresa.email}"></td>
+                        <td th:text="${empresa.razaoSocial}"></td>
                         <td th:text="${empresa.cnpj}"></td>
-                        <td th:text="${empresa.cpf}"></td>
+                        <td th:text="${empresa.cpfRepresentante}"></td>
                     </tr>
                     </tbody>
                 </table>
