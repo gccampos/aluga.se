@@ -35,6 +35,12 @@
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/empresa/empresas}">Lista de Empresas</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/produto/produtos}">Lista de Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/locatario/locatarios}">Lista de Locatários</a>
+            </li>
         </ul>
         <div>
             <a th:if="${session.isEmpty()}" th:href="@{/login}" method="get">

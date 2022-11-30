@@ -1,6 +1,7 @@
 package com.projSotware.alugase.controller;
 
 import com.projSotware.alugase.enums.Mensagem;
+import com.projSotware.alugase.model.Empresa;
 import com.projSotware.alugase.model.Endereco;
 import com.projSotware.alugase.model.Locador;
 import com.projSotware.alugase.service.LocadorService;
@@ -43,6 +44,13 @@ public class LocadorController {
         ModelMapBuilder.setMensagem(mensagemSucesso, model);
         ModelMapBuilder.setTitulo("Login", model);
         return "login";
+    }
+
+    @GetMapping(value = "/locadores")
+    public String locadores(ModelMap model){
+        ModelMapBuilder.setListaLocadores(locadorService.todosLocadores(), model);
+        ModelMapBuilder.setTitulo(TituloPagina.LISTA_LOCADORES.getTitulo(), model);
+        return "listaLocadores";
     }
 
 }

@@ -5,6 +5,9 @@ import com.projSotware.alugase.repository.EmpresaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class EmpresaService {
     @Autowired
@@ -24,5 +27,9 @@ public class EmpresaService {
 
     public void cadastrarEmpresa(Empresa empresa){
         empresaRepository.save(empresa);
+    }
+
+    public ArrayList<Empresa> todasEmpresas(){
+        return (ArrayList<Empresa>) empresaRepository.findAll();
     }
 }

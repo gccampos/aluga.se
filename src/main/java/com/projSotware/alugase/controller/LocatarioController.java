@@ -37,5 +37,12 @@ public class LocatarioController {
         return "login";
     }
 
+    @GetMapping(value = "/locatarios")
+    public String locatarios(ModelMap model){
+        ModelMapBuilder.setListaLocatarios(locatarioService.todosLocatarios(), model);
+        ModelMapBuilder.setTitulo(TituloPagina.LISTA_LOCATARIOS.getTitulo(), model);
+        return "listaLocatarios";
+    }
+
 
 }

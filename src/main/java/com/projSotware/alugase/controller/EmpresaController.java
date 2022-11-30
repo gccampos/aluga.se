@@ -4,6 +4,7 @@ import com.projSotware.alugase.builder.ModelMapBuilder;
 import com.projSotware.alugase.enums.Mensagem;
 import com.projSotware.alugase.enums.TituloPagina;
 import com.projSotware.alugase.factory.MensagensFactory;
+import com.projSotware.alugase.model.Categoria;
 import com.projSotware.alugase.model.Empresa;
 import com.projSotware.alugase.model.Endereco;
 import com.projSotware.alugase.service.EmpresaService;
@@ -41,6 +42,13 @@ public class EmpresaController {
             return "error";
         }
         return "redirect:/login";
+    }
+
+    @GetMapping(value = "/empresas")
+    public String empresas(ModelMap model){
+        ModelMapBuilder.setListaEmpresas(empresaService.todasEmpresas(), model);
+        ModelMapBuilder.setTitulo(TituloPagina.LISTA_EMPRESAS.getTitulo(), model);
+        return "listaEmpresas";
     }
 
 }

@@ -54,6 +54,12 @@ public class ProdutoController {
         } catch (IOException e) {
             return "error";
         }
-
     }
+    @GetMapping(value = "/produtos")
+    public String produtos(ModelMap model){
+        ModelMapBuilder.setListaProdutos(produtoService.todosProdutos(), model);
+        ModelMapBuilder.setTitulo(TituloPagina.LISTA_PRODUTOS.getTitulo(), model);
+        return "listaProdutos";
+    }
+
 }

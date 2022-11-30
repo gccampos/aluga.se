@@ -27,4 +27,5 @@ public class ProdutoService {
     public void cadastrarProduto(Produto produto){
          produtoRepository.save(produto);
     }
+
 }

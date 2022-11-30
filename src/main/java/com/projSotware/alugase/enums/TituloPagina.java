@@ -8,7 +8,12 @@ public enum TituloPagina {
     CADASTRO_PRODUTO("Cadastro Produto"),
     CADASTRO_CATEGORIA("Cadastro Categoria"),
     CADASTRO_EMPRESA("Cadastro Empresa"),
-    CADASTRO_LOCATARIO("Cadastro Locatário");
+    CADASTRO_LOCATARIO("Cadastro Locatário"),
+    LISTA_CATEGORIAS("Lista de Categorias"),
+    LISTA_LOCADORES("Lista de Locadores"),
+    LISTA_EMPRESAS("Lista de Empresas"),
+    LISTA_LOCATARIOS("Lista de Locatarios"),
+    LISTA_PRODUTOS("Lista de Produtos");
     TituloPagina(String tituloPagina) {
         this.titulo = tituloPagina;
     }

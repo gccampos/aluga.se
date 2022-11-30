@@ -35,7 +35,15 @@ public class CategoriaController {
         var mensagem = MensagensFactory.setMensagemComTipoETexto("success", Mensagem.SUCESSO_CADASTRO_CATEGORIA.getMensagem());
         ModelMapBuilder.setMensagem(mensagem, model);
         return "cadastroCategoria";
-
     }
+
+    @GetMapping(value = "/categorias")
+    public String categorias(ModelMap model){
+        ModelMapBuilder.setListaCategorias(categoriaService.todasCategorias(), model);
+        ModelMapBuilder.setTitulo(TituloPagina.LISTA_CATEGORIAS.getTitulo(), model);
+        return "listaCategorias";
+    }
+
+
 
 }
