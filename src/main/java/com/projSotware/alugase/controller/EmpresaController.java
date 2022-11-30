@@ -33,9 +33,11 @@ public class EmpresaController {
     }
 
     @PostMapping("/cadastrar")
-    private String cadastrar(@RequestParam String email, @RequestParam String senha, @RequestParam String nome, @RequestParam String razaoSocial, @RequestParam String cnpj, @RequestParam String cpf, @RequestParam MultipartFile fotoRepresentante, ModelMap model) throws IOException{
+    private String cadastrar(@RequestParam String email, @RequestParam String senha, @RequestParam String nomeFantasia, @RequestParam String razaoSocial, @RequestParam String cnpj, @RequestParam String cpf, @RequestParam MultipartFile fotoRepresentante, ModelMap model) throws IOException{
         var enderecos = new ArrayList<Endereco>();
-        Empresa empresa = new Empresa(email, senha, nome, razaoSocial, cnpj, null, cpf, fotoRepresentante.getBytes());
+        var fotoRepresentanteByte = new byte[0];
+        fotoRepresentanteByte = fotoRepresentante.getBytes();
+        Empresa empresa = new Empresa(email, senha, nomeFantasia, razaoSocial, cnpj, null, cpf, fotoRepresentanteByte);
         try{
             empresaService.cadastrarEmpresa(empresa);
         } catch (Exception e){
